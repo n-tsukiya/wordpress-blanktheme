@@ -1,0 +1,21 @@
+/**
+ * フォントサイズを3種類くらい定義
+ *
+ * そのうちremにpxからremに変更したい
+ */
+
+// $font-size-main: 16px;
+
+/**
+ * フォントの種類の定義
+ * タイトル系、テキスト系の2種類定義する
+ * 必ず最低限のfont-familyに定義しておく
+ * (safari等の標準フォントがダサいため)
+ *
+ * 暫定でNotoSansJPを使っている
+ * 英数字系のフォントも考慮したい
+ */
+
+html {
+  font-family: "Noto Sans JP", sans-serif;
+}

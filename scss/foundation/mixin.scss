@@ -1,0 +1,14 @@
+/**
+ * @mixinの記述は原則このファイルに記述
+ *
+ * 以下使用頻度が高いものを残す
+ */
+
+// フォント系の一括指定
+@mixin font-config($size: 16px, $family: $font-family-text, $color: #333333, $weight: normal, $height: 150%) {
+  font-size: $size;
+  font-family: $family;
+  color: $color;
+  font-weight: $weight;
+  line-height: $height;
+}

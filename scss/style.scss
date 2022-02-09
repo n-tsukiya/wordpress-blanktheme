@@ -1,0 +1,13 @@
+// プラグイン「WP-SCSS」だとアスタリスクは使えないっぽい
+// 以下フォントのコンパイル例
+// @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:100,300,400");
+
+@import "./foundation/break-point.scss";
+@import "./foundation/color.scss";
+@import "./foundation/font.scss";
+@import "./foundation/mixin.scss";
+@import "./foundation/reset.scss";
+
+@import "./layout/l-header.scss";
+@import "./layout/l-main.scss";
+@import "./layout/l-footer.scss";

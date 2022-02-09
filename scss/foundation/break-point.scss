@@ -1,0 +1,32 @@
+/**
+ * ブレークポイントに関わる記述は原則このファイルに記述
+ * インナー幅はデザインカンプに応じて適宜変更
+ */
+
+$layout-width-inner: 992px;
+$breakpoints: (
+  "xsp": "screen and (max-width: 499px)",
+  "sp": "screen and (max-width: 767px)",
+  "tab": "screen and (max-width: #{$layout-width-inner - 1px})",
+  "pc": "screen and (min-width: #{$layout-width-inner})",
+);
+
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// brタグのクラス
+.sp-br {
+  display: none;
+  @include mq("sp") {
+    display: block;
+  }
+}
+
+.pc-br {
+  @include mq("sp") {
+    display: none;
+  }
+}
