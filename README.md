@@ -17,10 +17,11 @@
 cd [プロジェクトのディレクトリ]/html/wp-content/themes/
 git clone git@github.com:n-tsukiya/wordpress-blanktheme.git
 mv wordpress-blanktheme [テーマ名]
+cd [テーマ名]
 rm -rf .git
 ```
 
-`style.css`の修正
+`style.css`の修正（プロジェクト直下の方のstyle.css）
 ```
 /*!
 Theme Name: [テーマ名]
@@ -49,11 +50,35 @@ Version: 1.0.0
 
 
 ## 開発の流れ
-TOPページは`front-page.php`, 下層ページは`page-**.php`としてコーディングを行う（スラッグを`**`と同じ文字にすることに注意）
+### WP-SCSSの設定
+管理画面 > 設定 > WP-SCSS を開く  
+| 設定項目 | 設定値 |
+|:----------:|:------------:|
+| Base Location | Current Theme |
+| Scss Location | /scss/ |
+| Css Location | /css/ |
+| Compiling Mode | Compressed |
+| Source Map Mode | None |
+| Error Display | Show to Logged in Users |
+| Enqueue Stylesheets | チェック無し |
+| Always Recompile | チェック有り |
+
+上記設定で、ブラウザリロードで自動コンパイルが行われる  
+（エントリーポイントは`/scss/style.scss`なので、ここで`@import`文を書くことを忘れないこと）  
+<br>
+<br>
+
+
+### 固定ページ用ファイルの作成方法
+TOPページは`front-page.php`, 下層ページは`page-**.php`としてコーディングを行う（スラッグを`**`と同じ文字にすることに注意）  
 <br><br>
 
 
 ## その他
+### リポジトリの作成
+基本的な準備が完了したら、このテーマではなく、WordPressのリポジトリ自体でリポジトリを作成すると良い  
+<br><br>
+
 ### contact form 7 のテンプレート
 現在準備中
 <br>
