@@ -12,18 +12,18 @@
 
 
 ### テーマのアップロード
+このリポジトリをそのまま`html/wp-content/themes/`配下で展開し、gitの管理を外す  
 ```
-cd [環境]/html/wp-content/themes/
-git clone [このリポジトリ]
-mv [このリポジトリ] [プロジェクト名]
+cd [プロジェクトのディレクトリ]/html/wp-content/themes/
+git clone git@github.com:n-tsukiya/wordpress-blanktheme.git
+mv wordpress-blanktheme [テーマ名]
 rm -rf .git
 ```
-このリポジトリをそのまま`html/wp-content/themes/`配下で展開し、gitの管理を外す  
 
 `style.css`の修正
 ```
 /*!
-Theme Name: [プロジェクト名]
+Theme Name: [テーマ名]
 Author: 株式会社TOKOS
 Version: 1.0.0
 */
@@ -49,7 +49,7 @@ Version: 1.0.0
 
 
 ## 開発の流れ
-TOPページは`front-page.php`, 下層ページは`page-**.php`としてコーディングを行う
+TOPページは`front-page.php`, 下層ページは`page-**.php`としてコーディングを行う（スラッグを`**`と同じ文字にすることに注意）
 <br><br>
 
 
