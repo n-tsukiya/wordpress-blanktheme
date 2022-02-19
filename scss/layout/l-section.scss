@@ -1,0 +1,13 @@
+.l-section {
+}
+
+.l-section__container {
+  max-width: $layout-width-inner;
+  margin: 0 auto;
+  @include mq("tab") {
+    max-width: 767px;
+  }
+  @include mq("sp") {
+    max-width: 499px;
+  }
+}
