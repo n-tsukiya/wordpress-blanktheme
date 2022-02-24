@@ -1,0 +1,16 @@
+$layer: (
+  modal: 100,
+  drawer: 40,
+  sp-menu: 35,
+  floating: 30,
+  header: 20,
+  default: 1,
+);
+
+// 以下使い方
+// .hoge {
+//   z-index: map-get($layer, "header");
+// }
+// .huga {
+//   z-index: map-get($layer, "header") + 1;
+// }
