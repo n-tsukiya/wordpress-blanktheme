@@ -88,6 +88,13 @@ a {
   background-color: transparent;
   text-decoration: none;
   color: inherit;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+a:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s;
 }
 
 abbr[title] {
@@ -132,6 +139,11 @@ embed,
 object,
 iframe {
   vertical-align: bottom;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 button,
