@@ -7,3 +7,5 @@
   <?php wp_head(); ?>
 </head>
 <body>
+  <header class="l-header">
+  </header>
